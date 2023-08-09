@@ -79,29 +79,29 @@
         this.isOn = false
       }
       turnOn(){
-      if (!this.isOn){
-        this.isOn = true
-        return "You turned the bulb ON!"
-      }
+        if(!this.isOn){
+          this.isOn = true
+          return "You turned the bulb ON"
+        }
       }
       turnOff(){
         if(this.isOn){
           this.isOn = false
-          return "You turned the bulb OFF!"
+          return "You turned the bulb OFF"
         }
       }
       toggle(){
         this.isOn = !this.isOn
         if(this.isOn){
-          return "You turned the bulb ON!"
+          return "You turned the bulb ON"
         }else{
-          return "You turned the bulb OFF!"
+          return "You turned the bulb OFF"
         }
       }
     }
-  const bulb = new Bulb()
-  console.log(bulb.turnOff)
-  console.log(bulb.turnOn)
+    const bulb = new Bulb()
+    console.log(bulb.turnOn())
+    console.log(bulb.turnOff())
     // 👉 CHALLENGE 4
     // 🧠 Build a CountDown class that can count down starting at any number we pass to the constructor.
     // 🧠 CountDowns have a `count` method that returns a string in the format "10!".
