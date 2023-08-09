@@ -116,25 +116,27 @@
     //   minusThree.count() // returns "Liftoff!"
     //   minusThree.count() // returns null
     //   minusThree.count() // returns null
-    class CountDown {
+    class CountDown{
       constructor(start){
-        this.currentCount = start
+        this.countValue = start
       }
-    count(){
-      if(this.currentCount > 0){
-        const stringNum = this.currentCount
-        return stringNum
-      }else if (this.currentCount === 0){
-        this.currentCount = "Liftoff!"
-        return "Liftoff!"
-      }else{
-        return null
+      count(){
+        if(this.countValue > 0){
+          const countString = `${this.countValue}!`
+          this.countValue--
+          return countString
+        }else if(this.countValue === 0){
+          this.countValue = "Liftoff!"
+          return "Liftoff!"
+        }else{
+          return null
+        }
       }
     }
-    }
-    let minusThree = new CountDown(4)
+    const minusThree = new CountDown(4)
     console.log(minusThree.count())
 
+   
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
