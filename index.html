@@ -120,8 +120,20 @@
       constructor(start){
         this.currentCount = start
       }
-
+    count(){
+      if(this.currentCount > 0){
+        const stringNum = this.currentCount
+        return stringNum
+      }else if (this.currentCount === 0){
+        this.currentCount = "Liftoff!"
+        return "Liftoff!"
+      }else{
+        return null
+      }
     }
+    }
+    let minusThree = new CountDown(4)
+    console.log(minusThree.count())
 
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
